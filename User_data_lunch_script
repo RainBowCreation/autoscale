@@ -9,6 +9,7 @@ cd /home/ec2-user
 #clonwoking repo
 git clone https://github.com/RainBowCreation/wokernode.git
 cd worknode/node
+#download multipapernode 1.19.2-37
 wget https://multipaper.io/api/v2/projects/multipaper/versions/1.19.2/builds/37/downloads/multipaper-1.19.2-37.jar
 #startup server
 ./run.sh
