@@ -1,0 +1,14 @@
+#!/bin/bash -ex
+exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+sudo yum upgrade
+#install tmux
+sudo yum install tmux -y
+#install git
+sudo yum install git -y
+cd /home/ec2-user
+#clonwoking repo
+git clone https://github.com/RainBowCreation/autoscale.git
+#install java
+cd wokernode
+chmod +x ./User_data_lunch_script
+sudo ./User_data_lunch_script
