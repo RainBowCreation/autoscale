@@ -8,9 +8,9 @@ master-connection:
   master-address: rainbowcreation.net
   my-name: node
 optimizations:
-  dont-save-just-for-lighting-updates: false
-  reduce-player-position-updates-in-unloaded-chunks: false
-  ticks-per-inactive-entity-tracking: 1
+  dont-save-just-for-lighting-updates: true
+  reduce-player-position-updates-in-unloaded-chunks: true
+  ticks-per-inactive-entity-tracking: 20
   use-event-based-io: true
 peer-connection:
   compression-threshold: 0
