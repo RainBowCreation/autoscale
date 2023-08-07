@@ -7,11 +7,11 @@ cd /home/ec2-user
 #clonwoking repo
 git clone https://github.com/RainBowCreation/wokernode.git
 #install java
-cd lib
+cd wokernode/lib
 chmod +x install.sh
 ./install.sh
 cd ..
-cd worknode/node
+cd node
 #download multipapernode 1.19.2-37
 chmod +x install.sh
 ./install.sh
