@@ -1,5 +1,5 @@
-# wokernode
-workernodeTemplateForAutoscale
+# autoscale
+TemplateForAutoscaling
 
 # using AWS EC2 auto scaling group
 - base 1 vCpu 2 Gb
