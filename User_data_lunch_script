@@ -9,4 +9,5 @@ cd node
 chmod +x install.sh
 ./install.sh
 chmod +x start.sh
+tmux
 ./start.sh
