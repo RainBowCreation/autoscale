@@ -1,16 +1,18 @@
 #!/bin/bash -ex
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 sudo yum upgrade
-#install java
-sudo yum install jdk-20-headless
 #install git
 sudo yum install git -y
 cd /home/ec2-user
 #clonwoking repo
 git clone https://github.com/RainBowCreation/wokernode.git
+#install java
+cd lib
+./install.sh
+cd ..
 cd worknode/node
 #download multipapernode 1.19.2-37
-wget https://multipaper.io/api/v2/projects/multipaper/versions/1.19.2/builds/37/downloads/multipaper-1.19.2-37.jar
+./install.sh
 #set master node ip here
 MULTIPAPER_MASTER_ADDRESS=3.86.190.46:35353
 #startup server
