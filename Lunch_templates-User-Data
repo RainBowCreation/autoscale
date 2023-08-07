@@ -10,5 +10,5 @@ cd /home/ec2-user
 git clone https://github.com/RainBowCreation/autoscale.git
 #install java
 cd wokernode
-chmod +x ./User_data_lunch_script
-sudo ./User_data_lunch_script
+chmod +x ./setup.sh
+sudo ./setup.sh
