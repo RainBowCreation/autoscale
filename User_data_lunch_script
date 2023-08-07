@@ -9,5 +9,6 @@ cd node
 chmod +x install.sh
 ./install.sh
 chmod +x start.sh
-tmux new -d -s server
-tmux send-keys ./start.sh
+#tmux new -d -s server
+#tmux send-keys ./start.sh
+./start.sh
