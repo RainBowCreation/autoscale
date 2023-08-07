@@ -8,8 +8,5 @@ cd node
 #download multipapernode 1.19.2-37
 chmod +x install.sh
 ./install.sh
-#set master node ip here
-MULTIPAPER_MASTER_ADDRESS=3.86.190.46:35353
-#startup server
 chmod +x start.sh
 ./start.sh
