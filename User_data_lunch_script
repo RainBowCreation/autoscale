@@ -7,7 +7,7 @@ sudo yum install jdk-20-headless
 sudo yum install git -y
 cd /home/ec2-user
 #clonwoking repo
-git clone https://github.com/RainBowCreation/wokernode
+git clone https://github.com/RainBowCreation/wokernode.git
 cd worknode/node
 #startup server
 ./run.sh
