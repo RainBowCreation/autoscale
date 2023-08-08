@@ -13,8 +13,8 @@ optimizations:
   ticks-per-inactive-entity-tracking: 20
   use-event-based-io: true
 peer-connection:
-  compression-threshold: 0
-  consolidation-delay: 0
+  compression-threshold: 1024
+  consolidation-delay: 2
 sync-settings:
   files:
     files-to-not-sync:
