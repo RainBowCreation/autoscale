@@ -1,2 +1,2 @@
 #!/bin/bash
-wget https://multipaper.io/api/v2/projects/multipaper/versions/1.19.2/builds/37/downloads/multipaper-1.19.2-37.jar
+wget https://git.magmafoundation.org/api/v4/projects/7/packages/maven/org/magmafoundation/Magma/1.12.2-47c7ac0b/Magma-1.12.2-47c7ac0b.jar
