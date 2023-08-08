@@ -9,6 +9,6 @@ cd /home/ec2-user
 #clonwoking repo
 git clone https://github.com/RainBowCreation/autoscale.git
 #install java
-cd wokernode
+cd autoscale
 chmod +x ./setup.sh
 sudo ./setup.sh
