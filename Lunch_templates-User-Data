@@ -10,5 +10,6 @@ cd /home/ec2-user
 git clone https://github.com/RainBowCreation/autoscale.git
 #install java
 cd autoscale
+set JAVA_OPTS="-Xms128m -Xmx10G"
 chmod +x ./setup.sh
 sudo ./setup.sh
