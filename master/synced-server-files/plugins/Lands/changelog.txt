@@ -1,0 +1,6 @@
++ Added: Support for papers async tab completion
+    Helpful for servers with lots of lands
+
+- Fixed: Missing category description
+- Fixed: [#2351] tab completion at /lands spawn
+- Fixed: [#2350] nottrusted command blacklist filtering commands
