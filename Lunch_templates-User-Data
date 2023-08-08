@@ -7,7 +7,7 @@ sudo yum install tmux -y
 sudo yum install git -y
 cd /home/ec2-user
 #clonwoking repo
-git clone https://github.com/RainBowCreation/autoscale.git
+git clone -b NoMulti https://github.com/RainBowCreation/autoscale.git
 #install java
 cd autoscale
 set JAVA_OPTS="-Xms128m -Xmx10G"
