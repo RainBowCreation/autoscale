@@ -1,5 +1,5 @@
-# autoscale
-TemplateForAutoscaling
+# autoscale NoMulti
+TemplateForAutoscaling without multipaper
 
 # using AWS EC2 auto scaling group
 - base 1 vCpu 2 Gb
