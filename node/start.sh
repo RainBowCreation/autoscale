@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# resync plugin folder to only download
+rm -rf plugins
+
 # generate random id
 MULTIPAPER_NODE_NAME=$(cat /proc/sys/kernel/random/uuid)
 
