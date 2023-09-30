@@ -83,7 +83,7 @@ use-server-uuid-cache: false
 #
 # - A H2 database is the default option.
 # - If you want to edit data manually in "traditional" storage files, we suggest using YAML.
-storage-method: h2
+storage-method: MariaDB
 
 # The following block defines the settings for remote database storage methods.
 #
@@ -99,7 +99,7 @@ data:
 
   # The name of the database to store LuckPerms data in.
   # - This must be created already. Don't worry about this setting if you're using MongoDB.
-  database: minecraft
+  database: rainbowcreation
 
   # Credentials for the database.
   username: root
@@ -132,7 +132,7 @@ data:
     # from being timed out by the database or network infrastructure, measured in milliseconds.
     # - The value should be less than maximum-lifetime and greater than 30000 (30 seconds).
     # - Setting the value to zero will disable the keepalive functionality.
-    keepalive-time: 0
+    keepalive-time: 60000
 
     # This setting controls the maximum number of milliseconds that the plugin will wait for a
     # connection from the pool, before timing out.
@@ -209,7 +209,7 @@ split-storage:
 # - This is disabled by default, as most users will not need it. However, if you're using a remote
 #   storage type without a messaging service setup, you may wish to set this to something like 3.
 # - Set to -1 to disable the task completely.
-sync-minutes: -1
+sync-minutes: 1
 
 # If the file watcher should be enabled.
 #
