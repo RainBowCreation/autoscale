@@ -862,18 +862,18 @@ database:
   # It is not recommended to connect multiple Lands servers to one database with the same table prefix.
   mysql:
     # NOTE: If enabled, make sure 'sqlite' is disabled below.
-    enabled_20: false
-    ip-address: 'localhost'
+    enabled_20: true
+    ip-address: '192.168.1.200'
     port: '3306'
-    username: 'minecraft'
+    username: 'root'
     password: 'password'
-    database: 'lands'
+    database: 'rainbowcreation'
 
     # It is highly recommended to set a unique table prefix if the plugin shares a database with other plugins or Lands instances.
     table-prefix: 'lands_'
 
   # You can also use SQLite. It will run out of the box.
-  sqlite: true
+  sqlite: false
 
   # Backup settings
   # This option is deprecated.
