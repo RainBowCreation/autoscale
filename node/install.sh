@@ -8,7 +8,6 @@ wget https://github.com/MilkBowl/Vault/releases/download/1.7.3/Vault.jar
 wget https://github.com/NEZNAMY/TAB/releases/download/4.0.5/TAB.v4.0.5.jar
 wget https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsX-2.20.1.jar
 wget https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsXChat-2.20.1.jar
-wget https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsXXMPP-2.20.1.jar
 wget https://github.com/dmulloy2/ProtocolLib/releases/latest/download/ProtocolLib.jar
 wget https://github.com/RainBowCreation/Core/releases/latest/download/RBCcore.jar
 cd ..
