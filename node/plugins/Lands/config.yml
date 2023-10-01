@@ -863,11 +863,11 @@ database:
   mysql:
     # NOTE: If enabled, make sure 'sqlite' is disabled below.
     enabled_20: false
-    ip-address: '192.168.1.200'
+    ip-address: 'localhost'
     port: '3306'
     username: 'root'
-    password: 'password'
-    database: 'rainbowcreation'
+    password: ''
+    database: 'database'
 
     # It is highly recommended to set a unique table prefix if the plugin shares a database with other plugins or Lands instances.
     table-prefix: 'lands_'
