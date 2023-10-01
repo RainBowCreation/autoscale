@@ -23,3 +23,12 @@ TemplateForAutoscaling without multipaper
 - setup Dynamic scaling policies to Target Tracking Policy As required to maintain Average CPU utilization at 50
 - make sure your first desire node = minimum node there may cause was some wird bug when first setup is not equal.
 - enjoy :)
+
+# How To run the server manual way without autoscale
+## 1.Clone this repo to environment that mach minimum requirement
+## 2.Set up environtment
+- if this is fresh linux-type environment run ./setup-debian.sh or aws-like env run ./setup.sh
+- if error occured try copy line-by line script and don't use tmux
+## 3.Start the server
+- run ./start.sh
+- if this is not fresh installed and all require lib already install you can install only jarfile by run ./install.sh first then ./start.sh
