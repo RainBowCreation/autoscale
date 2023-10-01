@@ -12,3 +12,6 @@ wget https://github.com/EssentialsX/Essentials/releases/download/2.20.1/Essentia
 wget https://github.com/dmulloy2/ProtocolLib/releases/latest/download/ProtocolLib.jar
 wget https://github.com/RainBowCreation/Core/releases/latest/download/RBCcore.jar
 cd ..
+wget https://github.com/RainBowCreation/auth/releases/latest/download/auth
+echo "installation complete please run ./auth to authenticate your license"
+echo "you can start the server using ./start.sh"
