@@ -1,4 +1,4 @@
-# autoscale NoMulti
+# autoscale 1.12.2
 TemplateForAutoscaling without multipaper
 
 # using AWS EC2 auto scaling group
