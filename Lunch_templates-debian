@@ -2,7 +2,7 @@
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 sudo apt upgrade
 #clonwoking repo
-git clone -b NoMulti https://github.com/RainBowCreation/autoscale.git
+git clone -b "1.12.2" https://github.com/RainBowCreation/autoscale.git
 #install java
 cd autoscale
 set JAVA_OPTS="-Xms128m -Xmx4G"
