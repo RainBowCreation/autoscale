@@ -5,7 +5,7 @@ cd
 git clone https://github.com/RainBowCreation/autoscale.git
 #install java
 cd autoscale
-set NODE_ARGS="-DmultipaperMasterAddress=46.250.229.33:35353 -Dproperties.online-mode=false -Dspigot.settings.bungeecord=true"
+set NODE_ARGS="-DmultipaperMasterAddress=localhost:35353 -Dproperties.online-mode=false -Dspigot.settings.bungeecord=true"
 set JAVA_OPTS="-Xms128m -Xmx4G"
 set JAVA_VERSION="17.0.9-amzn"
 set PORT=25565
