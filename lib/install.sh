@@ -1,6 +1,5 @@
 #!/bin/bash
-sudo yum install tmux zip unzip -y
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install java "$JAVA_VERSION"-amzn
-sdk use java "$JAVA_VERSION"-amzn
+ sudo rpm --import https://yum.corretto.aws/corretto.key 
+ sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+ sudo yum install -y java-20-amazon-corretto-devel
+ sudo alternatives --config java 1

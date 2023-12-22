@@ -1,13 +1,14 @@
 #!/bin/bash -ex
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
-yum install git -y
+sudo yum upgrade
+#install tmux
+sudo yum install tmux -y
+#install git
+sudo yum install git -y
 cd /home/ec2-user
-#clone working repo
+#clonwoking repo
 git clone https://github.com/RainBowCreation/autoscale.git
 cd autoscale
-set CONFIG_FILE="config.json" # config location
-chmod +x load_config.sh
-sudo ./load_config.sh
-#install multipaper
+set JAVA_OPTS="-Xms128m -Xmx10G"
 chmod +x ./setup.sh
 sudo ./setup.sh
