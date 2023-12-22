@@ -1,2 +1,6 @@
 #!/bin/bash
-wget https://multipaper.io/api/v2/projects/multipaper/versions/1.19.2/builds/37/downloads/multipaper-1.19.2-37.jar
+echo "downloading multipaper1.20.1.."
+wget https://api.multipaper.io/v2/projects/multipaper/versions/1.20.1/builds/14/downloads/multipaper-1.20.1-14.jar
+echo "change filename to node.jar"
+mv multipaper-1.20.1-14.jar node.jar
+echo "done"

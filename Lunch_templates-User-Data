@@ -1,15 +1,13 @@
 #!/bin/bash -ex
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
-sudo yum upgrade
-#install tmux
-sudo yum install tmux -y
-#install git
-sudo yum install git -y
-cd /home/ec2-user
+cd 
 #clonwoking repo
 git clone https://github.com/RainBowCreation/autoscale.git
 #install java
 cd autoscale
-set JAVA_OPTS="-Xms128m -Xmx10G"
+set NODE_ARGS="-DmultipaperMasterAddress=46.250.229.33:35353 -Dproperties.online-mode=false -DSpigot.settings.bungeecord=true"
+set JAVA_OPTS="-Xms128m -Xmx4G"
+set JAVA_VERSION="17.0.9-amzn"
+set PORT=25565
 chmod +x ./setup.sh
 sudo ./setup.sh
