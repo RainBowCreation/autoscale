@@ -9,9 +9,6 @@ cd ..
 cd node
 #download multipapernode 
 run
-cd synced-server-files/plugins
-run
-cd ../../
 chmod +x start.sh
 tmux start-server
 tmux new -d -s server
