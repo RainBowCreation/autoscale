@@ -1,4 +1,4 @@
 #bin/bash
 echo "installing plugins"
-wget https://www.spigotmc.org/resources/viaversion.19254/download?version=521999
+wget https://github.com/ViaVersion/ViaVersion/releases/download/4.9.2/ViaVersion-4.9.2.jar
 echo "done"
