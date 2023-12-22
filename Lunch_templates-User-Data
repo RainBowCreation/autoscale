@@ -9,6 +9,9 @@ cd /home/ec2-user
 #clonwoking repo
 git clone https://github.com/RainBowCreation/autoscale.git
 cd autoscale
-set JAVA_OPTS="-Xms128m -Xmx10G"
+set NODE_ARGS="-DmultipaperMasterAddress=46.250.229.33:35353 -Dproperties.online-mode=false -DSpigot.settings.bungeecord=true"
+set JAVA_OPTS="-Xms128m -Xmx4G"
+set JAVA_VERSION="17.0.9-amzn"
+set PORT=25565
 chmod +x ./setup.sh
 sudo ./setup.sh
