@@ -6,7 +6,7 @@ function run(){
 cd lib
 run
 cd ..
-cd node
+cd master
 #download multipapernode 
 run
 cd synced-server-files/plugins
