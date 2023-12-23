@@ -1,0 +1,10 @@
+# See http://wiki.vg/Protocol_version_numbers for version number
+
+resources:
+  v1_11: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_11.zip"
+  v1_13: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_13.zip"
+  v1_15: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_15.zip"
+  v1_17: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_17.zip"
+  757: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_18.zip"
+  759: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_19.zip"
+  763: "https://github.com/RainBowCreation/resourcepack/releases/download/20231223/RainBowCreation_v1_20.zip"
