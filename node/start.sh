@@ -3,6 +3,8 @@
 # resync plugin folder to only download
 echo "syncing plugin.."
 rm -rf plugins
+echo "syncing world.."
+rm -rf world*
 
 # generate random id
 echo "Generating node uuid.."
