@@ -6,7 +6,7 @@
 master-connection:
   advertise-to-built-in-proxy: true
   master-address: localhost:35353
-  my-name: 35ee4065-33cd-4c77-ba03-b8f73424b070
+  my-name: node
 optimizations:
   dont-save-just-for-lighting-updates: true
   max-footstep-packets-sent-per-player: 16
@@ -25,8 +25,7 @@ sync-settings:
     files-to-sync-in-real-time:
     - plugins/MyPluginDirectory/userdata
     files-to-sync-on-startup:
-    - myconfigfile.yml
-    - plugins/MyPlugin.jar
+    - plugins/
     log-file-syncs: true
   persistent-player-entity-ids: true
   persistent-vehicle-entity-ids-seconds: 15
