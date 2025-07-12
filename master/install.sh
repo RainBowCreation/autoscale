@@ -1,2 +1,2 @@
 #!/bin/bash
-wget https://multipaper.io/api/v2/projects/multipaper/versions/1.19.2/builds/37/downloads/MultiPaper-Master-2.10.1-all.jar
+wget https://api.multipaper.io/v2/projects/multipaper/versions/1.20.1/builds/59/downloads/multipaper-master-2.12.3-all.jar master.jar

@@ -5,7 +5,6 @@ chmod +x install.sh
 ./install.sh
 cd ..
 cd node
-#download multipapernode 1.19.2-37
 chmod +x install.sh
 ./install.sh
 chmod +x start.sh
