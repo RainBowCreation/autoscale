@@ -3,11 +3,7 @@ exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 cd 
 #clonwoking repo
 git clone https://github.com/RainBowCreation/autoscale.git
-#install java
 cd autoscale
-set NODE_ARGS="-DmultipaperMasterAddress=localhost:35353 -Dproperties.online-mode=false -Dproperties.max-tick-time=-1 -Dproperties.difficulty=hard -Dspigot.settings.bungeecord=true"
-set JAVA_OPTS="-Xms128m -Xmx4G"
-set JAVA_VERSION="17.0.9-amzn"
-set PORT=25565
+set JAVA_OPTS="-Xms128m -Xmx10G"
 chmod +x ./setup.sh
 sudo ./setup.sh

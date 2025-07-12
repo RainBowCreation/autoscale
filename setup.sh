@@ -7,8 +7,9 @@ cd lib
 run
 cd ..
 cd node
-#download multipapernode 
-run
+#download multipapernode 1.19.2-37
+chmod +x install.sh
+./install.sh
 chmod +x start.sh
 tmux start-server
 tmux new -d -s server
