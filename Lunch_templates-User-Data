@@ -8,3 +8,4 @@ chmod +x ./load_config.sh
 sudo ./load_config.sh
 chmod +x ./setup.sh
 sudo ./setup.sh
+# override config by "export config=value"
