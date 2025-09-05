@@ -1,6 +1,16 @@
 #!/bin/bash -ex
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 cd 
+
+export JAVA_VERSION="21.0.8-amzn"
+
+sudo yum update && upgrade -y
+sudo yum install git zip unzip tmux -y
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install java ${JAVA_VERSION} 
+sdk use java ${JAVA_VERSION}
+
 #clonwoking repo
 git clone https://github.com/RainBowCreation/autoscale.git
 cd autoscale
@@ -8,4 +18,5 @@ chmod +x ./load_config.sh
 sudo ./load_config.sh
 chmod +x ./setup.sh
 sudo ./setup.sh
+
 # override config by "export config=value"
