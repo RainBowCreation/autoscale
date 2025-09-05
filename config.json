@@ -1,7 +1,8 @@
 {
     "MASTER_ADDRESS": "localhost:35353",
     "SERVER_SECRET": "CHANGE_ME",
-    "JAVA_VERSION": "21",
-    "JAVA_OPTS": "-Xms1G -Xmx16G",
-    "CUSTOM_RESOURCE_PACK_URL": "https://example.com/resourcepack.zip"
+    "JAVA_VERSION": "21.0.8-amzn",
+    "JAVA_OPTS": "-Xms1G -Xmx4G",
+    "CUSTOM_RESOURCE_PACK_URL": "https://example.com/resourcepack.zip",
+    "NODE_ARGS": "-Dspigot.settings.bungeecord=true -Dserver.properties.online-mode=false"
 }
