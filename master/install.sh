@@ -7,5 +7,7 @@ cd synced-server-files
 mkdir plugins
 cd plugins
 wget https://hangarcdn.papermc.io/plugins/ViaVersion/ViaVersion/versions/5.4.2/PAPER/ViaVersion-5.4.2.jar
+wget https://repo.rainbowcreation.net/files/Lands.jar
+wget https://repo.rainbowcreation.net/files/RainBowCreation-bootstrap.jar
 cd ../..
 echo "done"

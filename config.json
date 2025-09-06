@@ -2,7 +2,9 @@
     "MASTER_ADDRESS": "localhost:35353",
     "SERVER_SECRET": "CHANGE_ME",
     "JAVA_VERSION": "21.0.8-amzn",
-    "JAVA_OPTS": "-Xms1G -Xmx4G",
-    "CUSTOM_RESOURCE_PACK_URL": "https://example.com/resourcepack.zip",
-    "NODE_ARGS": "-Dspigot.settings.bungeecord=true -Dserver.properties.online-mode=false -Dserver,properties.motd='smp.rainbowcreation.net'"
+    "JAVA_OPTS": "-Xms1G -Xmx3G",
+    "MOTD": "smp.rainbowcreation.net",
+    "ONLINE_MODE": "true",
+    "MAX_PLAYERS": 10,
+    "NODE_ARGS": "-Dspigot.settings.bungeecord=true -Dproperties.difficulty=normal -Dproperties.view-distance=6 -Dproperties.simulation-distance=2 -Dproperties.max-tick-time=-1 -Dproperties.player-idle-timeout=10 -Dproperties.enable-command-block=false -Dproperties.enable-rcon=false"
 }

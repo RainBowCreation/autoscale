@@ -1,11 +1,16 @@
 #!/bin/bash
-function run(){
-	chmod +x install.sh
-	./install.sh
+function install_lib(){
+	cd lib
+	if [ "$YUM" = true ] ; then
+		chmod +x install_yum.sh
+		./install_yum.sh
+	else
+		chmod +x install.sh
+		./install.sh
+	fi
+	cd ..
 }
-cd lib
-run
-cd ..
+install_lib
 cd node
 #download multipapernode 1.19.2-37
 chmod +x install.sh
