@@ -7,9 +7,8 @@ export YUM=true
 git clone https://github.com/RainBowCreation/autoscale.git
 cd autoscale
 
-export CONFIG_FILE="config.json"
-
 export CONFIG_FILE=config.json
+chmod +x load_config.sh
 eval "$("./load_config.sh")"
 
 # override config by "export config=value" example
