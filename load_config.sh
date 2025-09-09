@@ -1,8 +1,14 @@
 #!/bin/bash
 : "${CONFIG_FILE:=config.json}"
 
+if [ "$YUM" = true ] ; then
+		sudo yum install jq -y
+	else
+		apt install jq -y
+fi
+
 if ! command -v jq &> /dev/null; then
-  echo "❌ jq is required but not installed." >&2
+  echo "❌ jq is required but not installed. auto installed failed." >&2
   return 1 2>/dev/null || exit 1
 fi
 
