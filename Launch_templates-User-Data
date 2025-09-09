@@ -1,0 +1,50 @@
+#!/bin/bash -ex
+# Log everything
+exec > >(tee /var/log/user-data.log | logger -t user-data -s 2>/dev/console) 2>&1
+
+# Always have a HOME for non-login shells
+export HOME=/root
+cd /root
+
+# Pick package manager
+if command -v dnf >/dev/null 2>&1; then PM=dnf
+elif command -v yum >/dev/null 2>&1; then PM=yum
+elif command -v apt-get >/dev/null 2>&1; then PM=apt-get
+else
+  echo "No supported package manager found" >&2
+  exit 1
+fi
+
+# Update and install deps
+case "$PM" in
+  dnf)      $PM -y install git jq ;;
+  yum)      $PM -y install git jq ;;
+  apt-get)  $PM update -y && $PM install -y git jq ;;
+esac
+
+# Work under a stable path
+mkdir -p /opt/minecraft
+cd /opt/minecraft
+
+# Clone (idempotent)
+if [ ! -d autoscale/.git ]; then
+  git clone --depth 1 https://github.com/RainBowCreation/autoscale.git
+fi
+cd autoscale
+
+export AWS=true
+
+# Ensure scripts are executable
+chmod +x load_config.sh setup.sh
+
+# Load config (expects the script to echo lines like: export FOO=bar)
+export CONFIG_FILE=config.json
+eval "$("./load_config.sh")"
+
+# override config using `export KE=VALUE`` example `export JAVA_VERSION=11.0.18-zulu`
+
+# Run setup (already root, no sudo)
+./setup.sh
+
+# Optionally: write a marker so you know it completed
+echo "user-data completed at $(date -u)" > /var/run/user-data.done
