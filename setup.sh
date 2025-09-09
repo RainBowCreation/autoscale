@@ -51,7 +51,9 @@ chmod +x install.sh
 ./install.sh
 chmod +x start.sh
 echo downloaded node.
-echo setup complete.. starting server..
-tmux start-server
+echo setup complete..
+echo createing tmux session..
 tmux new -d -s server
+echo starting server..
 tmux send-keys -t server "./start.sh" C-m
+echo server started.
