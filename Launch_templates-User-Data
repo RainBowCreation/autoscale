@@ -7,9 +7,9 @@ export HOME=/root
 cd /root
 
 # Pick package manager
-if command -v dnf >/dev/null 2>&1; then PM=dnf
-elif command -v yum >/dev/null 2>&1; then PM=yum
-elif command -v apt-get >/dev/null 2>&1; then PM=apt-get
+if command -v dnf >/dev/null 2>&1; then export PM=dnf
+elif command -v yum >/dev/null 2>&1; then export PM=yum
+elif command -v apt-get >/dev/null 2>&1; then export PM=apt-get
 else
   echo "No supported package manager found" >&2
   exit 1
