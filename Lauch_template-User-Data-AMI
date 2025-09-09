@@ -1,0 +1,30 @@
+#!/bin/bash -ex
+# Log everything
+exec > >(tee /var/log/user-data.log | logger -t user-data -s 2>/dev/console) 2>&1
+
+export HOME=/root
+
+if command -v dnf >/dev/null 2>&1; then export PM=dnf
+elif command -v yum >/dev/null 2>&1; then export PM=yum
+elif command -v apt-get >/dev/null 2>&1; then export PM=apt-get
+else
+  echo "No supported package manager found" >&2
+  exit 1
+fi
+
+cd /opt/minecraft/autoscale
+chmod +x load_config.sh
+export CONFIG_FILE=config.json
+eval "$("./load_config.sh")"
+
+# override config using `export KE=VALUE`` example
+# export MASTER_ADDRESS=172.31.18.50:35353
+
+cd node
+chmod +x start.sh
+tmux new -d -s server
+echo starting server..
+tmux send-keys -t server "./start.sh" C-m
+echo server started.
+
+echo "user-data completed at $(date -u)" > /var/run/user-data.done
