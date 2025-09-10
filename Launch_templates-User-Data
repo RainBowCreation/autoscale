@@ -41,11 +41,25 @@ chmod +x load_config.sh setup.sh
 export CONFIG_FILE=config.json
 eval "$("./load_config.sh")"
 
-# override config using `export KE=VALUE`` example `export JAVA_VERSION=11.0.18-zulu`
-TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 3600")
-export REGION=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/placement/region)
-export INSTANCE_ID=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
+# Fetch IMDSv2 token and query once
+TOKEN=$(curl -fsS -X PUT "http://169.254.169.254/latest/api/token" \
+  -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
 
+REGION=$(curl -fsS -H "X-aws-ec2-metadata-token: $TOKEN" \
+  http://169.254.169.254/latest/meta-data/placement/region) 
+
+INSTANCE_ID=$(curl -fsS -H "X-aws-ec2-metadata-token: $TOKEN" \
+  http://169.254.169.254/latest/meta-data/instance-id)
+
+unset TOKEN           # optional: don’t keep token around
+
+REGION=$(echo $REGION | cut -d'-' -f1)
+INSTANCE_ID=$(echo $INSTANCE_ID | cut -d'-' -f2-)
+export REGION INSTANCE_ID
+
+# sanity check — these are now literal strings in THIS shell
+echo "$REGION"
+echo "$INSTANCE_ID"
 
 # Run setup (already root, no sudo)
 ./setup.sh
