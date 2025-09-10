@@ -24,12 +24,17 @@ sync-settings:
     files-to-sync-in-real-time:
     - plugins/MyPluginDirectory/userdata
     files-to-sync-on-startup:
-    - config/paper-global.yml
+    - config/
     - spigot.yml
     - plugins/
+    - bukkit.yml
+    - pufferfish.yml
+    - purpur.yml
+    - plugins/
+    - server.properties
     log-file-syncs: true
   sync-entity-ids: true
   sync-json-files: true
-  sync-permissions: false
+  sync-permissions: true
   sync-scoreboards: true
-  use-local-player-count-for-server-is-full-kick: false
+  use-local-player-count-for-server-is-full-kick: true

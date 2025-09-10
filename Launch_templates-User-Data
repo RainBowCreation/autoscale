@@ -42,6 +42,10 @@ export CONFIG_FILE=config.json
 eval "$("./load_config.sh")"
 
 # override config using `export KE=VALUE`` example `export JAVA_VERSION=11.0.18-zulu`
+TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 3600")
+export REGION=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/placement/region)
+export INSTANCE_ID=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
+
 
 # Run setup (already root, no sudo)
 ./setup.sh

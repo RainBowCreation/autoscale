@@ -1,10 +1,12 @@
 {
     "MASTER_ADDRESS": "localhost:35353",
     "SERVER_SECRET": "CHANGE_ME",
+    "REGION": "dedicated",
+    "INSTANCE_ID": "1",
     "JAVA_VERSION": "21.0.8-amzn",
     "JAVA_OPTS": "-Xms1G -Xmx7G",
-    "MOTD": "smp.rainbowcreation.net",
+    "MOTD": "Autoscale by RainbowCreation",
     "ONLINE_MODE": "true",
     "MAX_PLAYERS": 50,
-    "NODE_ARGS": "-Dspigot.settings.bungeecord=true -Dproperties.difficulty=normal -Dproperties.view-distance=6 -Dproperties.simulation-distance=2 -Dproperties.max-tick-time=-1 -Dproperties.player-idle-timeout=10 -Dproperties.enable-command-block=false -Dproperties.enable-rcon=false -Dproperties.spawn-protection=0"
+    "NODE_ARGS": ""
 }
