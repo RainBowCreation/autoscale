@@ -8,7 +8,7 @@ TemplateForAutoscaling
 
 * minimum spec 1 vCpu 1 Gb
 * recommend spec 2 vCpu 2Gb
-* **STRONG INTERNET CONNECTION**
+* **STRONG INTERNET CONNECTION, for recommend spec can handle ~<=500 players**
 
 ###### For worker node
 - **minimum specs support 20 playes per worker node**
@@ -43,3 +43,6 @@ TemplateForAutoscaling
 
 for manually installation run ``lib/install.sh`` ``setup.sh``
 configurations available at ``config.json`` or overrided at ``Lauch_templates-Users-Data``
+
+## Standalone
+- config ``INSTANCE_ID`` must difference between each node

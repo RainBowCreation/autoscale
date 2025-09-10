@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# resync plugin folder to only download
-echo "syncing plugin.."
+# resync for only pull
+echo "syncing configs.."
+rm -rf config/
+rm -rf *.yml
+rm -rf server.properties
+rm -rf user*echo "syncing plugin.."
 rm -rf plugins
 echo "syncing world.."
 rm -rf world*
 
-if [ "$AWS" != true ] ; then
+if [ "$AWS" == true ] ; then
     # Fetch IMDSv2 token and query once
     TOKEN=$(curl -fsS -X PUT "http://169.254.169.254/latest/api/token" \
     -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")

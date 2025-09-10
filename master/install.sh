@@ -11,7 +11,6 @@ wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/PlaceholderAPI.j
 wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/ProtocalLib.jar
 wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/Vault.jar
 wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/Regionerator.jar
-wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/multipaperplaceholders.jar
 wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/CloudWatch.jar
 wget https://repo.rainbowcreation.net/files/jar/autoscale_utils/RainBowCreation-bootstrap.jar
 cd ../..
