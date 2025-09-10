@@ -6,6 +6,7 @@
     "JAVA_VERSION": "21.0.8-amzn",
     "JAVA_OPTS": "-Xms1G -Xmx7G",
     "MOTD": "Autoscale by RainbowCreation",
+    "MOTD_OVERRIDE": "true",
     "ONLINE_MODE": "true",
     "MAX_PLAYERS": 50,
     "NODE_ARGS": ""
